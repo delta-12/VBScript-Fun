@@ -9,6 +9,7 @@ exit /b
   <job id="VBS">
     <script language="VBScript">
       WScript.Echo "VBScript output called by batch"
+      objShell.run "" & ""
       call jsEcho
     </script>
   </job>
