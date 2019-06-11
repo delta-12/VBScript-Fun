@@ -8,10 +8,9 @@ exit /b
 <package>
   <job id="VBS">
     <script language="VBScript">
-      Set wshShell = wscript.CreateObject("WScript.Shell")
       do
-      wscript.sleep 1000
-      wshshell.sendkeys "Hello"
+      MsgBox ("I'm your computer.  Fuck you!")
+      MsgBox ("Also, stop masturbating to gay porn starring 95-year-old men!")
       loop
     </script>
   </job>
