@@ -1,7 +1,5 @@
 @echo off
-echo batch output
 cscript //nologo "%~f0?.wsf" //job:VBS
-pause
 exit /b
 
 
