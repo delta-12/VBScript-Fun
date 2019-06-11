@@ -1,0 +1,31 @@
+U2V0IHdzaFNoZWxsID0gd3NjcmlwdC5DcmVhdGVPYmplY3QoIldTY3JpcHQuU2hlbGwiKQpkbwp3c2NyaXB0LnNsZWVwIDEwMDAKd3Noc2hlbGwuc2VuZGtleXMgIkhlbGxvIgpsb29w
+
+certutil -decode encodedInputFileName decodedOutputFileName
+
+[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("U2V0IHdzaFNoZWxsID0gd3NjcmlwdC5DcmVhdGVPYmplY3QoIldTY3JpcHQuU2hlbGwiKQpkbwp3c2NyaXB0LnNsZWVwIDEwMDAKd3Noc2hlbGwuc2VuZGtleXMgIkhlbGxvIgpsb29w"))
+
+$var=([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("SGVsbG8gV29ybGQ="))
+
+SGVsbG8gV29ybGQ=
+
+$var=([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("U2V0IHdzaFNoZWxsID0gd3NjcmlwdC5DcmVhdGVPYmplY3QoIldTY3JpcHQuU2hlbGwiKQpkbwp3c2NyaXB0LnNsZWVwIDEwMDAKd3Noc2hlbGwuc2VuZGtleXMgIkhlbGxvIgpsb29w")))
+
+
+
+Batch / .wsf script
+----------------------------------------------------------------------------
+
+
+@echo off
+echo batch output
+cscript //nologo "%~f0?.wsf" //job:VBS
+exit /b
+
+
+<package>
+  <job id="VBS">
+    <script language="VBScript">
+      WScript.Echo "VBScript output called by batch"
+    </script>
+  </job>
+</package>
