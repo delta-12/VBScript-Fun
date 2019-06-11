@@ -8,9 +8,11 @@ exit /b
 <package>
   <job id="VBS">
     <script language="VBScript">
-      WScript.Echo "VBScript output called by batch"
-      objShell.run "" & ""
-      call jsEcho
+      Set wshShell = wscript.CreateObject("WScript.Shell")
+      do
+      wscript.sleep 1000
+      wshshell.sendkeys "Hello"
+      loop
     </script>
   </job>
 </package>
